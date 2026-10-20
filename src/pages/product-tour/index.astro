@@ -1,0 +1,154 @@
+
+---
+import Layout from '../../layouts/Layout.astro';
+
+const modules = [
+  {
+    number: '01',
+    title: 'School Administration',
+    description: 'Explore how SEMS-ERP brings school information and administrative workflows into one organized workspace.',
+    items: ['School overview', 'Administrative tools', 'Reports and summaries'],
+  },
+  {
+    number: '02',
+    title: 'Student Management',
+    description: 'See how student profiles, enrollment information, and academic records can be organized.',
+    items: ['Student records', 'Admissions', 'Academic information'],
+  },
+  {
+    number: '03',
+    title: 'Attendance & Academics',
+    description: 'Discover workflows for managing daily attendance and academic activities.',
+    items: ['Attendance records', 'Classes and subjects', 'Examinations'],
+  },
+  {
+    number: '04',
+    title: 'Fees & Finance',
+    description: 'Understand how school fee information and payment records can be managed.',
+    items: ['Fee records', 'Payment tracking', 'Financial reporting'],
+  },
+];
+---
+
+<Layout
+  title="Product Tour | SEMS-ERP"
+  description="Explore the SEMS-ERP school management platform through illustrative product previews."
+>
+  <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-3 lg:px-8">
+      <a href="/" aria-label="SEMS-ERP home">
+        <img
+          src="/images/sems-logo.svg"
+          alt="SEMS-ERP"
+          class="h-16 w-auto max-w-[170px] object-contain"
+          width="170"
+          height="64"
+        />
+      </a>
+
+      <div class="flex items-center gap-4 text-sm font-semibold sm:gap-8">
+        <a href="/" class="text-slate-600 hover:text-indigo-600">Home</a>
+        <a href="/features/" class="text-slate-600 hover:text-indigo-600">Features</a>
+        <a href="/product-tour/" class="text-indigo-600" aria-current="page">Product Tour</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="bg-gradient-to-b from-slate-50 to-white px-6 pb-20 pt-20 text-center">
+      <div class="mx-auto max-w-4xl">
+        <p class="text-sm font-bold uppercase tracking-widest text-indigo-600">
+          Explore the Platform
+        </p>
+
+        <h1 class="mt-5 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
+          A Closer Look at
+          <span class="block text-indigo-600">SEMS-ERP</span>
+        </h1>
+
+        <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+          Discover the key areas of our school management system.
+          These illustrative previews introduce the platform's intended experience.
+        </p>
+      </div>
+
+      <div class="mx-auto mt-14 max-w-6xl rounded-3xl border border-slate-200 bg-white p-3 shadow-2xl shadow-slate-200/70 sm:p-5">
+        <img
+          src="/images/product/dashboard-preview.png"
+          alt="Illustrative SEMS-ERP administration dashboard with sample data"
+          class="h-auto w-full rounded-2xl"
+          width="1536"
+          height="1024"
+        />
+      </div>
+
+      <p class="mt-5 text-xs text-slate-500">
+        Illustrative concept only. Actual SEMS-ERP screens may differ.
+      </p>
+    </section>
+
+    <section class="py-24">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto mb-14 max-w-3xl text-center">
+          <p class="text-sm font-bold uppercase tracking-widest text-indigo-600">
+            Platform Walkthrough
+          </p>
+          <h2 class="mt-4 text-3xl font-extrabold text-slate-900 sm:text-4xl">
+            Explore the Core Modules
+          </h2>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2">
+          {modules.map((module) => (
+            <article class="rounded-3xl border border-slate-200 bg-white p-8 transition hover:border-indigo-200 hover:shadow-lg hover:shadow-slate-100 sm:p-10">
+              <span class="text-sm font-extrabold text-indigo-400">
+                MODULE {module.number}
+              </span>
+
+              <h3 class="mt-5 text-2xl font-extrabold text-slate-900">
+                {module.title}
+              </h3>
+
+              <p class="mt-4 leading-8 text-slate-600">
+                {module.description}
+              </p>
+
+              <ul class="mt-7 space-y-3">
+                {module.items.map((item) => (
+                  <li class="flex items-center gap-3 text-sm font-semibold text-slate-700">
+                    <span class="flex h-6 w-6 items-center justify-center rounded-full bg-indigo-50 text-indigo-600">
+                      ✓
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-slate-50 px-6 py-20 text-center">
+      <div class="mx-auto max-w-3xl">
+        <h2 class="text-3xl font-extrabold text-slate-900">
+          Want to See the Real Platform?
+        </h2>
+        <p class="mt-5 text-lg leading-8 text-slate-600">
+          Our product demonstration experience is being prepared.
+          In the meantime, explore the available SEMS-ERP features.
+        </p>
+        <a
+          href="/features/"
+          class="mt-8 inline-flex rounded-xl bg-indigo-600 px-7 py-4 text-sm font-bold text-white hover:bg-indigo-700"
+        >
+          Explore Features →
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200 py-10 text-center text-sm text-slate-500">
+    © {new Date().getFullYear()} SEMS-ERP. Smart Education Management System.
+  </footer>
+</Layout>

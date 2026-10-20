@@ -1,0 +1,26 @@
+
+@import "tailwindcss";
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #14213d;
+  background: #ffffff;
+  font-synthesis: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Manrope", sans-serif;
+}
+
+::selection {
+  background: #c7d2fe;
+  color: #14213d;
+}

@@ -1,0 +1,158 @@
+
+---
+import Layout from '../../layouts/Layout.astro';
+
+const features = [
+  {
+    number: '01',
+    icon: '🎓',
+    title: 'Student Management',
+    description: 'Organize student information, admissions, enrollment, and academic records.',
+    highlights: ['Student profiles', 'Admission records', 'Academic history'],
+  },
+  {
+    number: '02',
+    icon: '📅',
+    title: 'Attendance Management',
+    description: 'Support everyday attendance tracking and organized attendance records.',
+    highlights: ['Daily attendance', 'Class records', 'Attendance reporting'],
+  },
+  {
+    number: '03',
+    icon: '💳',
+    title: 'Fees & Finance',
+    description: 'Simplify school fee administration and keep payment information organized.',
+    highlights: ['Fee records', 'Payment tracking', 'Financial summaries'],
+  },
+  {
+    number: '04',
+    icon: '📚',
+    title: 'Academics & Examinations',
+    description: 'Manage essential academic processes, examinations, and student results.',
+    highlights: ['Classes and subjects', 'Examinations', 'Results'],
+  },
+  {
+    number: '05',
+    icon: '👩‍🏫',
+    title: 'Staff Management',
+    description: 'Keep staff information accessible and support school administrative workflows.',
+    highlights: ['Staff profiles', 'Administrative records', 'School organization'],
+  },
+  {
+    number: '06',
+    icon: '📊',
+    title: 'Reports & Analytics',
+    description: 'Access useful school information through structured reports and summaries.',
+    highlights: ['Academic reports', 'Attendance insights', 'Financial summaries'],
+  },
+];
+
+---
+
+<Layout
+  title="Features | SEMS-ERP School Management Software"
+  description="Explore SEMS-ERP features for student management, attendance, school fees, examinations, staff, and reporting."
+>
+  <header class="border-b border-slate-200 bg-white">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4 lg:px-8">
+      <a href="/" aria-label="SEMS-ERP home">
+        <img
+          src="/images/sems-logo.svg"
+          alt="SEMS-ERP"
+          class="h-16 w-auto max-w-[170px] object-contain"
+          width="170"
+          height="64"
+        />
+      </a>
+
+      <div class="flex items-center gap-4 text-sm font-semibold sm:gap-8">
+        <a href="/" class="text-slate-600 hover:text-indigo-600">Home</a>
+        <a href="/features/" class="text-indigo-600" aria-current="page">Features</a>
+        <a href="/#contact" class="rounded-xl bg-indigo-600 px-4 py-3 text-white hover:bg-indigo-700">
+          Request a Demo
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="bg-gradient-to-b from-slate-50 to-white px-6 py-20 text-center lg:py-28">
+      <div class="mx-auto max-w-4xl">
+        <p class="text-sm font-bold uppercase tracking-widest text-indigo-600">
+          Explore SEMS-ERP
+        </p>
+
+        <h1 class="mt-5 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
+          Powerful Tools for
+          <span class="block text-indigo-600">Smarter School Management</span>
+        </h1>
+
+        <p class="mx-auto mt-7 max-w-2xl text-lg leading-8 text-slate-600">
+          Discover how SEMS-ERP brings important school operations together
+          in one organized platform.
+        </p>
+      </div>
+    </section>
+
+    <section class="pb-24">
+      <div class="mx-auto grid max-w-7xl gap-6 px-6 md:grid-cols-2 lg:px-8">
+        {features.map((feature) => (
+          <article class="rounded-3xl border border-slate-200 bg-white p-8 transition hover:border-indigo-200 hover:shadow-xl hover:shadow-slate-100 sm:p-10">
+            <div class="flex items-start justify-between">
+              <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-indigo-50 text-3xl">
+                {feature.icon}
+              </div>
+              <span class="text-sm font-extrabold text-indigo-200">{feature.number}</span>
+            </div>
+
+            <h2 class="mt-8 text-2xl font-extrabold text-slate-900">
+              {feature.title}
+            </h2>
+
+            <p class="mt-4 leading-8 text-slate-600">
+              {feature.description}
+            </p>
+
+            <div class="mt-7 border-t border-slate-100 pt-6">
+              <p class="mb-4 text-xs font-bold uppercase tracking-widest text-slate-400">
+                Key Capabilities
+              </p>
+
+              <ul class="space-y-3">
+                {feature.highlights.map((highlight) => (
+                  <li class="flex items-center gap-3 text-sm font-medium text-slate-700">
+                    <span class="flex h-6 w-6 items-center justify-center rounded-full bg-indigo-50 text-indigo-600">
+                      ✓
+                    </span>
+                    {highlight}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="bg-slate-50 px-6 py-20 text-center">
+      <div class="mx-auto max-w-3xl">
+        <h2 class="text-3xl font-extrabold text-slate-900">
+          See SEMS-ERP in Action
+        </h2>
+        <p class="mt-5 text-lg text-slate-600">
+          Explore the platform and discover how it can support your school.
+        </p>
+        <a
+          href="/#contact"
+          class="mt-8 inline-flex rounded-xl bg-indigo-600 px-7 py-4 text-sm font-bold text-white hover:bg-indigo-700"
+        >
+          Learn More →
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200 py-10 text-center text-sm text-slate-500">
+    © {new Date().getFullYear()} SEMS-ERP. Smart Education Management System.
+  </footer>
+</Layout>
