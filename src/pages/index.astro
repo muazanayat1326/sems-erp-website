@@ -1,18 +1,265 @@
 ---
-import Layout from '../layouts/Layout.astro';import CTA from '../components/CTA.astro';import {modules} from '../data/modules';
+import Layout from '../layouts/Layout.astro';
+import { modules } from '../data/modules';
 ---
-<Layout title="SEMS-ERP | Smart School Management Software" description="SEMS-ERP brings student management, attendance, academics, fee collection, homework, portals and reporting together for schools.">
-<section class="hero"><div class="container hero-grid"><div><span class="pill">One connected school management platform</span><h1 class="h1">Your school.<br />More organised.<br /><span class="text-indigo">More connected.</span></h1><p class="lead">Bring admissions, student records, academics, attendance, fees and school communication into one thoughtfully organised workspace. Less switching between systems. More time for what matters.</p><div class="actions"><a href="/contact/" class="btn btn-primary">Request a Personal Demo ↗</a><a href="/features/" class="btn btn-outline">Explore All Features →</a></div><p style="font-size:.8rem;color:#7a738b;margin-top:20px">Explore real workflows. No unverified automation promises.</p></div><div class="preview" role="img" aria-label="Illustrative dashboard layout showing school summary cards and an activity chart, not an actual product screenshot"><div class="preview-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span style="margin-left:auto;font-size:.65rem;color:#8d839d">SEMS-ERP · Dashboard concept</span></div><div class="preview-inner"><div class="preview-banner"><small>YOUR SCHOOL WORKSPACE</small><strong>Everything in one place.</strong><small>Students · Academics · Operations</small></div><div class="preview-stats"><div class="preview-stat"><small>Student records</small><strong>360°</strong></div><div class="preview-stat"><small>Academic views</small><strong>10+</strong></div><div class="preview-stat"><small>Connected workflows</small><strong>✓</strong></div></div><div style="font-size:.7rem;color:#6c6282;font-weight:800;margin:8px 0">ILLUSTRATIVE ACTIVITY VIEW</div><div class="preview-chart">{[36,61,46,80,55,89,70,96].map(h=><span style={`height:${h}%`}></span>)}</div></div></div></div></section>
-<div class="trust-strip"><div class="container trust-row"><span>Student-first records</span><span>Role-aware access</span><span>Practical school workflows</span><span>Exportable reporting</span></div></div>
-<section class="section" id="features"><div class="container"><div class="section-head"><span class="eyebrow">Explore the platform</span><h2 class="h2">Every school day, <span class="text-indigo">better connected.</span></h2><p class="lead">A detailed set of tools for the people, processes and records that keep your school running.</p></div><div class="grid3">{modules.slice(0,6).map(m=><article class="feature-card"><div class="feature-icon" aria-hidden="true">{m.icon}</div><h3>{m.title}</h3><p>{m.short}</p><a href={`/features/${m.slug}/`}>Explore module →</a></article>)}</div><div style="text-align:center;margin-top:35px"><a href="/features/" class="btn btn-outline">View All 10 Feature Groups →</a></div></div></section>
-<section class="section soft"><div class="container split"><div><span class="eyebrow">A clearer school picture</span><h2 class="h2">The right information, <span class="text-teal">in the right place.</span></h2><p class="lead">SEMS-ERP connects everyday records to the people who use them. A student profile brings together relevant academic, attendance, fee and document information while school dashboards surface operational priorities.</p><ul class="check-list"><li>Student 360 profiles bring records into one workspace.</li><li>Role-aware navigation helps users focus on relevant tasks.</li><li>Reports and CSV exports support school administration.</li></ul><div class="actions"><a href="/features/students-admissions/" class="btn btn-primary">Explore Student 360 →</a></div></div><div class="mock-surface"><span class="eyebrow">Illustrative workflow</span><h3 style="font-size:1.4rem;margin:12px 0 25px">Student information at a glance</h3>{[['Student profile','Active record'],['Academics','Results & remarks'],['Attendance','Daily records'],['Fees','Challans & receipts'],['Documents','Managed files']].map(([label,value])=><div class="mock-row"><span class="mock-label">{label}</span><span class="mock-chip">{value}</span></div>)}</div></div></section>
-<section class="section"><div class="container"><div class="section-head"><span class="eyebrow">How it fits together</span><h2 class="h2">From the first admission to the final report.</h2><p class="lead">Follow a practical, connected school workflow.</p></div><div class="steps"><div class="step"><span class="step-num">01 / ENROL</span><h3>Welcome students</h3><p>Review applications, enrol students and maintain their profiles.</p></div><div class="step"><span class="step-num">02 / ORGANISE</span><h3>Plan academics</h3><p>Set up classes, sections, subjects and weekly timetables.</p></div><div class="step"><span class="step-num">03 / MANAGE</span><h3>Run the school day</h3><p>Record attendance, publish assignments and manage fees.</p></div><div class="step"><span class="step-num">04 / UNDERSTAND</span><h3>Review progress</h3><p>Explore exam results, operational reports and school analytics.</p></div></div></div></section>
-<section class="section dark-section"><div class="container split"><div><span class="eyebrow">For the whole school</span><h2 class="h2">Built around the roles that make a school work.</h2><p class="lead">Administrators, principals, teachers, accountants, parents and students see different areas of the platform according to their assigned access.</p><div class="actions"><a href="/features/portals/" class="btn btn-white">Explore School Portals →</a></div></div><div class="grid2"><div class="mini-stat"><strong>School leaders</strong><p>Oversight and administrative actions</p></div><div class="mini-stat"><strong>Teachers</strong><p>Classes, attendance and coursework</p></div><div class="mini-stat"><strong>Accountants</strong><p>Fees and financial records</p></div><div class="mini-stat"><strong>Families</strong><p>Linked student information and tasks</p></div></div></div></section>
-<section class="section"><div class="container split"><div><span class="eyebrow">Explore before you decide</span><h2 class="h2">Take a closer look at the platform.</h2><p class="lead">Explore the feature workflows and see an illustrative preview of the SEMS-ERP experience. For an accurate demonstration of your school's requirements, speak to our team.</p><div class="actions"><a href="/product-tour/" class="btn btn-primary">Explore Product Tour →</a></div></div><figure class="tour-screen"><img src="/images/product/dashboard-preview.png" alt="Illustrative school ERP dashboard preview with sample information" loading="lazy" width="1536" height="1024"/><figcaption>Illustrative preview. Actual application screens may differ.</figcaption></figure></div></section>
-<section class="section soft"><div class="container"><div class="section-head"><span class="eyebrow">Practical outcomes</span><h2 class="h2">A clearer workflow for every department.</h2><p class="lead">See how everyday tasks translate into usable records and follow-up actions.</p></div><div class="grid3">{[{n:'01',t:'Admissions office',d:'Move applications through review decisions, enrol approved candidates and maintain complete student profiles.',l:'students-admissions'},{n:'02',t:'Academic coordination',d:'Organise class sections and teachers, enter marks, manage coursework and review academic results.',l:'academics-timetable'},{n:'03',t:'Accounts department',d:'Prepare challans, record received payments, print receipts and identify outstanding balances.',l:'fees-finance'},{n:'04',t:'Teaching teams',d:'Take daily attendance, publish assignments and provide feedback on student submissions.',l:'attendance-leave'},{n:'05',t:'School leadership',d:'Review operational dashboards, student distributions, attendance and assessment reports.',l:'reports-analytics'},{n:'06',t:'Families and learners',d:'Access linked student information, view available report cards and follow assignments.',l:'portals'}].map(x=><article class="feature-card outcome-card"><span class="eyebrow">TEAM {x.n}</span><h3>{x.t}</h3><p>{x.d}</p><a href={`/features/${x.l}/`}>Explore the workflow →</a></article>)}</div></div></section><section class="section"><div class="container split"><div><span class="eyebrow">A realistic demonstration</span><h2 class="h2">See the workflows that matter to your school.</h2><p class="lead">Whether your priority is attendance, fee collection or student records, a guided conversation can focus on the processes your team handles every day.</p><ul class="check-list"><li>Review actual module screens during a demonstration.</li><li>Discuss access requirements for school staff and families.</li><li>Identify which existing workflows the platform can support.</li></ul><div class="actions"><a class="btn btn-primary" href="/contact/">Request a tailored demo ↗</a></div></div><div class="insight-panel light-panel"><span class="eyebrow">Questions worth asking</span><div class="question-list"><p><strong>Admissions:</strong> How does an approved applicant become a student?</p><p><strong>Attendance:</strong> How do teachers save a class roll call?</p><p><strong>Finance:</strong> How are challans, payments and receipts linked?</p><p><strong>Academics:</strong> How are marks entered and report cards printed?</p></div></div></div></section>
-<section class="section" id="inside-sems"><div class="container"><div class="section-head"><span class="eyebrow">A DEEPER LOOK / THE PLATFORM</span><h2 class="h2">Not just a list of features. <span class="text-teal">A working school system.</span></h2><p class="lead">Every school department has its own routine. SEMS-ERP gives each team a dedicated workflow while keeping relevant student and operational information available in connected views.</p></div><div class="capability-stack">{[{n:'01',t:'The admissions office',d:'Record an applicant’s requested grade, previous-school details and guardian information. Track decisions through review and enrol approved applicants into student records.',slug:'students-admissions'},{n:'02',t:'The academic coordinator',d:'Define classes, sections, rooms and subjects. Allocate lessons to teachers and check for room, teacher and class conflicts when saving a timetable slot.',slug:'academics-timetable'},{n:'03',t:'The classroom teacher',d:'Take daily roll call, create subject assignments, attach learning materials, review student submissions and record marks with remarks.',slug:'attendance-leave'},{n:'04',t:'The accounts team',d:'Prepare monthly challans, generate class-wide batches, record payments against vouchers and print receipts while reviewing unpaid balances.',slug:'fees-finance'},{n:'05',t:'The school leadership team',d:'Inspect enrolment distribution, attendance reports, financial information and assessment summaries; export relevant data to CSV.',slug:'reports-analytics'}].map(x=><article class="capability-item"><div class="capability-index">{x.n}</div><div><h3>{x.t}</h3><p>{x.d}</p><a href={`/features/${x.slug}/`} style="display:inline-block;margin-top:15px;color:#5036c9;font-weight:800">Read the detailed workflow ↗</a></div></article>)}</div></div></section>
-<section class="section soft"><div class="container"><div class="section-head"><span class="eyebrow">IMPLEMENTATION CONVERSATIONS</span><h2 class="h2">Questions worth answering <span class="text-indigo">before your school adopts software.</span></h2><p class="lead">A credible product demonstration should make the everyday processes clear—not just show a polished dashboard.</p></div><div class="grid2">{[{q:'How does a student move from admission to enrolment?',a:'Review the application statuses, approval action, student creation and Student 360 record.',l:'students-admissions'},{q:'How are staff prevented from double-booking a lesson?',a:'Inspect the teacher, room and class-section conflict checks when a timetable slot is saved.',l:'academics-timetable'},{q:'How is a payment reflected against a challan?',a:'Follow challan generation, manual payment entry, reference recording and receipt printing.',l:'fees-finance'},{q:'What can parents and students actually do?',a:'Explore linked child information, printable vouchers, exam views and student assignment submissions.',l:'portals'}].map(x=><article class="detail"><h3 style="font-size:1.45rem;color:#241454">{x.q}</h3><p style="font-size:1rem">{x.a}</p><a href={`/features/${x.l}/`} style="display:inline-block;margin-top:18px;font-weight:800;color:#5036c9">See how it works →</a></article>)}</div></div></section>
-<section class="section soft"><div class="container"><div class="section-head"><span class="eyebrow">BUILT AROUND REAL SCHOOL TASKS</span><h2 class="h2">The detail behind <span class="text-teal">every school day.</span></h2><p class="lead">A management platform earns its place by making routine tasks clear, repeatable and reviewable. Explore the actual steps supported in SEMS-ERP rather than relying on broad feature labels.</p></div><div class="focus-grid"><article class="focus-card"><span class="eyebrow">01 / STUDENT LIFECYCLE</span><h3>From application to Student 360</h3><p>Review applicant information, record admission decisions, enrol approved candidates and maintain a student record with guardian, academic, attendance, fee and document views.</p><a href="/features/students-admissions/" class="btn btn-outline">Explore admissions →</a></article><article class="focus-card"><span class="eyebrow">02 / SCHOOL FINANCE</span><h3>From challan to receipt</h3><p>Prepare individual or class-wide fee challans, print bank-style vouchers, record received payments and review outstanding balances. Payment processing is not presented as a gateway.</p><a href="/features/fees-finance/" class="btn btn-outline">Explore finance →</a></article><article class="focus-card"><span class="eyebrow">03 / TEACHING & LEARNING</span><h3>From assignment to feedback</h3><p>Teachers create coursework with deadlines and attachments. Students submit work through their portal, and teachers record scores and written feedback.</p><a href="/features/homework/" class="btn btn-outline">Explore coursework →</a></article></div></div></section>
-<section class="section"><div class="container"><div class="proof-banner"><div><span class="eyebrow" style="color:#70e4d9">PRODUCT WALKTHROUGH</span><h2>See the platform behind the promise.</h2><p>The product tour introduces real workflows and clearly labels illustrative material. Ask for a guided demonstration to inspect the live interfaces relevant to your school's requirements.</p><div class="actions"><a class="btn btn-teal" href="/product-tour/">Open product tour →</a><a class="btn btn-white" href="/contact/">Arrange a walkthrough ↗</a></div></div><figure class="product-proof"><img src="/images/product/dashboard-preview.png" width="1536" height="1024" loading="lazy" alt="Illustrative SEMS-ERP school dashboard with sample information"/><figcaption>Illustrative dashboard concept, not an authenticated screenshot of the production application.</figcaption></figure></div></div></section>
-<CTA/>
+
+<Layout
+  title="SEMS-ERP | School Management, Simplified"
+  description="Manage student records, admissions, attendance, fees, examinations and school communication in one connected school management platform."
+>
+  <!-- 1. Hero -->
+  <section class="home-hero">
+    <div class="container home-hero-grid">
+      <div class="home-hero-copy">
+        <span class="home-kicker"><span class="kicker-dot"></span> School management, brought together</span>
+        <h1 class="home-title">Run your school.<br /><span>With more clarity.</span></h1>
+        <p class="home-intro">SEMS-ERP brings student records, admissions, academics, attendance, fees and school communication into one organised workspace—so your team can spend less time switching between tasks.</p>
+        <div class="actions home-actions">
+          <a href="/contact/" class="btn home-btn-primary">Request a Demo <span aria-hidden="true">↗</span></a>
+          <a href="/features/" class="btn home-btn-outline">Explore Features <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="home-proof-points">
+          <span><b aria-hidden="true">✓</b> Connected school workflows</span>
+          <span><b aria-hidden="true">✓</b> Role-aware access</span>
+          <span><b aria-hidden="true">✓</b> Practical reporting tools</span>
+        </div>
+      </div>
+      <div class="home-dashboard-wrap" aria-label="Illustrative SEMS-ERP dashboard preview">
+        <div class="home-float-note note-student"><span class="note-icon">◈</span><span><strong>Student records</strong><small>One organised profile</small></span></div>
+        <div class="home-dashboard">
+          <div class="dashboard-bar"><span class="dash-dots"><i></i><i></i><i></i></span><span>SEMS-ERP / School workspace</span><span class="dash-avatar">S</span></div>
+          <div class="dashboard-body">
+            <div class="dashboard-welcome"><small>SCHOOL OVERVIEW</small><strong>Your school at a glance.</strong><span>Student and academic records</span></div>
+            <div class="dashboard-metrics">
+              <div><small>Students</small><strong>Records</strong><span>Student 360</span></div>
+              <div><small>Academics</small><strong>Classes</strong><span>Subjects & lessons</span></div>
+              <div><small>Operations</small><strong>Daily</strong><span>Attendance & fees</span></div>
+            </div>
+            <div class="dashboard-chart-head"><strong>Academic activity</strong><span>Illustrative view</span></div>
+            <div class="dashboard-chart" aria-hidden="true">
+              {[38, 57, 44, 72, 54, 84, 65, 94, 73, 87].map((height, i) => <span class:list={['chart-bar', i % 3 === 1 ? 'chart-bar-alt' : '']} style={"height:" + height + "%"}></span>)}
+            </div>
+            <div class="dashboard-lower"><span><i class="lower-dot teal-dot"></i> Student records</span><span><i class="lower-dot gold-dot"></i> Academic workflows</span></div>
+          </div>
+        </div>
+        <div class="home-float-note note-fees"><span class="note-icon note-icon-gold">₨</span><span><strong>Fees & finance</strong><small>Challans, payments, receipts</small></span></div>
+        <p class="dashboard-caption">Illustrative interface concept—not a live student-data screenshot.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Feature overview -->
+  <section class="section home-features" id="features">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Explore the platform</span>
+        <h2 class="h2">Every school day, <span class="text-indigo">better connected.</span></h2>
+        <p class="lead">The core tools that help your team organise student information, academic routines and everyday school operations.</p>
+      </div>
+      <div class="grid3 home-module-grid">
+        {modules.slice(0, 6).map((module) => (
+          <article class="feature-card home-module-card">
+            <div class="feature-icon" aria-hidden="true">{module.icon}</div>
+            <h3>{module.title}</h3>
+            <p>{module.short}</p>
+            <a href={"/features/" + module.slug + "/"}>Explore module <span aria-hidden="true">→</span></a>
+          </article>
+        ))}
+      </div>
+      <div class="home-centered-link"><a href="/features/" class="btn btn-outline">View All Feature Groups <span aria-hidden="true">→</span></a></div>
+    </div>
+  </section>
+
+  <!-- 3. Technology and connected workflows -->
+  <section class="section home-technology">
+    <div class="container home-technology-grid">
+      <div class="home-technology-copy">
+        <span class="eyebrow">Built for everyday school operations</span>
+        <h2 class="h2">A clearer view of the school, <span class="text-teal">in one place.</span></h2>
+        <p class="lead">Keep relevant records connected across the student lifecycle—from admission and enrolment to attendance, assessments and fee records.</p>
+        <div class="home-benefit-list">
+          <div><span class="benefit-icon">◈</span><p><strong>Connected student records</strong><small>Review relevant academic, attendance, fee and document information in the Student 360 workspace.</small></p></div>
+          <div><span class="benefit-icon">▦</span><p><strong>Organised academic planning</strong><small>Manage classes, sections, subjects, teachers and weekly timetable assignments.</small></p></div>
+          <div><span class="benefit-icon">₨</span><p><strong>Practical fee workflows</strong><small>Prepare challans, record payments, print receipts and review outstanding balances.</small></p></div>
+          <div><span class="benefit-icon">⇩</span><p><strong>Useful reports and exports</strong><small>Review school information and export supported records for further analysis.</small></p></div>
+        </div>
+        <div class="actions"><a href="/product-tour/" class="btn btn-primary">Take the Product Tour <span aria-hidden="true">→</span></a></div>
+      </div>
+      <div class="home-system-card">
+        <div class="system-card-head"><span>SEMS-ERP</span><span class="system-live-dot"></span></div>
+        <div class="system-card-title"><small>CONNECTED WORKSPACE</small><h3>From daily tasks<br />to useful records.</h3></div>
+        <div class="system-flow">
+          <div class="system-flow-row"><span class="flow-symbol">01</span><span><strong>Admissions</strong><small>Applications & enrolment</small></span><span class="flow-arrow">↘</span></div>
+          <div class="system-flow-row"><span class="flow-symbol flow-symbol-teal">02</span><span><strong>School day</strong><small>Attendance & coursework</small></span><span class="flow-arrow">↘</span></div>
+          <div class="system-flow-row"><span class="flow-symbol flow-symbol-gold">03</span><span><strong>Review & report</strong><small>Results, fees & exports</small></span><span class="flow-check">✓</span></div>
+        </div>
+        <div class="system-card-foot"><span>One platform</span><span>Connected school workflows</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Portals and people -->
+  <section class="section home-portals">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">For the people in your school</span>
+        <h2 class="h2">Bring school teams and families <span class="text-indigo">closer together.</span></h2>
+        <p class="lead">Role-aware views help each user focus on the records and tasks relevant to them.</p>
+      </div>
+      <div class="grid3 home-portal-grid">
+        <article class="home-portal-card">
+          <div class="portal-icon portal-icon-blue">▦</div>
+          <h3>Administration</h3>
+          <p>Keep school operations organised with student records, academic setup and administrative views.</p>
+          <ul><li>Manage admissions and enrolments</li><li>Review attendance and fee records</li><li>Access reports and exports</li></ul>
+          <a href="/features/">Explore administration <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="home-portal-card portal-card-featured">
+          <div class="portal-icon portal-icon-violet">▣</div>
+          <h3>Teachers</h3>
+          <p>Support everyday classroom routines with access to relevant academic and student tasks.</p>
+          <ul><li>Record attendance</li><li>Manage assignments and submissions</li><li>Enter marks and remarks</li></ul>
+          <a href="/features/portals/">Explore school portals <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="home-portal-card">
+          <div class="portal-icon portal-icon-gold">◎</div>
+          <h3>Parents & Students</h3>
+          <p>Provide access to available student information and academic activities through the relevant portal.</p>
+          <ul><li>View available academic information</li><li>Follow homework and assignments</li><li>Access relevant fee information</li></ul>
+          <a href="/features/portals/">Explore family access <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Why SEMS-ERP -->
+  <section class="section home-why">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Why schools choose SEMS-ERP</span>
+        <h2 class="h2">Less scattered work. <span class="text-indigo">More organised school days.</span></h2>
+        <p class="lead">A practical system designed around the records, routines and people that keep a school moving.</p>
+      </div>
+      <div class="grid3 home-reasons-grid">
+        {[{icon:'✦',title:'A connected view',text:'Bring important student and school records together instead of searching across disconnected lists.'},{icon:'↗',title:'Room to grow',text:'Organise records and workflows as your school, classes and processes develop.'},{icon:'⚙',title:'Practical workflows',text:'Follow clear steps for admissions, attendance, fee records, assessments and coursework.'},{icon:'◎',title:'Role-aware access',text:'Present users with relevant areas of the platform according to their assigned permissions.'},{icon:'▤',title:'Useful reporting',text:'Review operational information and export supported records for further analysis.'},{icon:'☁',title:'Access through the web',text:'Use the web-based platform without installing a separate desktop application.'},{icon:'↔',title:'Adaptable conversations',text:'Discuss your school’s processes with the team and identify the workflows that fit your needs.'},{icon:'✓',title:'Clearer record keeping',text:'Keep key actions and school information in a more consistent, organised workspace.'},{icon:'➜',title:'Guided onboarding',text:'Plan your rollout with the team, including setup, data preparation and staff orientation.'}].map((item) => (
+          <article class="feature-card home-reason-card">
+            <div class="feature-icon" aria-hidden="true">{item.icon}</div>
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. About and conversion -->
+  <section class="section home-about">
+    <div class="container">
+      <div class="home-about-copy">
+        <span class="eyebrow">About SEMS-ERP</span>
+        <h2 class="h2">School management designed around <span class="text-indigo">real school routines.</span></h2>
+        <p class="lead">SEMS-ERP brings school administration, teachers, students and families into a connected digital workspace. Its focus is practical: organise records, make everyday processes easier to follow and give authorised users a clearer view of the information they need.</p>
+        <p class="home-about-note">Every school has its own requirements. A guided demonstration can help you review the available workflows and discuss how the platform may fit your institution.</p>
+      </div>
+      <div class="home-final-cta">
+        <div><span class="home-cta-kicker">YOUR NEXT SCHOOL DAY, BETTER ORGANISED</span><h2>Ready to explore SEMS-ERP?</h2><p>See the platform in context, ask questions about your school's workflows and discuss the right plan for your institution.</p></div>
+        <div class="actions home-cta-actions"><a href="/contact/" class="btn home-btn-primary">Request a Demo <span aria-hidden="true">↗</span></a><a href="/features/" class="btn home-btn-outline">Explore Features <span aria-hidden="true">→</span></a></div>
+      </div>
+    </div>
+  </section>
 </Layout>
+
+<style>
+  .home-hero{position:relative;overflow:hidden;padding:90px 0 84px;background:radial-gradient(ellipse at 78% 42%,#183e70 0,transparent 39%),linear-gradient(120deg,#071a36 0%,#0b2448 55%,#102c53 100%);color:#fff}
+  .home-hero:before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);background-size:36px 36px;mask-image:linear-gradient(90deg,transparent,#000 30%,#000)}
+  .home-hero-grid{position:relative;display:grid;grid-template-columns:1fr 1.03fr;align-items:center;gap:55px}
+  .home-hero-copy{position:relative;z-index:1}
+  .home-kicker{display:inline-flex;align-items:center;gap:10px;padding:9px 13px;border:1px solid #f4b23c45;background:#ffffff0b;border-radius:40px;color:#ffd16d;font-size:.72rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase}
+  .kicker-dot{width:8px;height:8px;border-radius:50%;background:#ffb22e;box-shadow:0 0 0 4px #ffb22e22}
+  .home-title{font-size:clamp(2.7rem,5.1vw,4.8rem);line-height:1.04;letter-spacing:-.06em;font-weight:850;margin:26px 0 22px;color:#fff}
+  .home-title span{color:#ffb52e}
+  .home-intro{font-size:1.06rem;line-height:1.85;color:#d1dced;max-width:570px;margin:0}
+  .home-actions{margin-top:27px}
+  .home-btn-primary{background:#ffb52e;color:#10213c;box-shadow:0 10px 28px #ffb52e22}
+  .home-btn-primary:hover{background:#ffc34e}
+  .home-btn-outline{background:#ffffff0b;border-color:#ffffff55;color:#fff}
+  .home-proof-points{display:flex;flex-wrap:wrap;gap:13px 19px;margin-top:28px;color:#d5deed;font-size:.77rem}
+  .home-proof-points b{color:#ffbf45;margin-right:5px}
+  .home-dashboard-wrap{position:relative;padding:24px 14px 26px}
+  .home-dashboard{position:relative;overflow:hidden;background:#fff;border:1px solid #d9e2f0;border-radius:18px;box-shadow:0 35px 85px #0005;transform:perspective(1200px) rotateY(-4deg)}
+  .dashboard-bar{height:47px;display:flex;align-items:center;gap:12px;padding:0 16px;background:#f5f7fb;border-bottom:1px solid #e5e9f2;color:#67758a;font-size:.65rem}
+  .dash-dots{display:flex;gap:5px}.dash-dots i{width:7px;height:7px;background:#d4dce8;border-radius:50%}
+  .dash-avatar{margin-left:auto;display:grid;place-items:center;width:25px;height:25px;border-radius:8px;background:#142e53;color:#fff;font-weight:800}
+  .dashboard-body{padding:21px}
+  .dashboard-welcome{display:flex;flex-direction:column;gap:7px;background:linear-gradient(115deg,#102c53,#1a4779);border-radius:12px;padding:21px;color:#fff}
+  .dashboard-welcome small,.system-card-title small{font-size:.59rem;letter-spacing:.13em;color:#fbc55e;font-weight:800}
+  .dashboard-welcome strong{font-size:1.2rem;letter-spacing:-.03em}
+  .dashboard-welcome>span{font-size:.72rem;color:#d6e2f3}
+  .dashboard-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:12px 0 19px}
+  .dashboard-metrics>div{padding:12px 10px;border:1px solid #e8edf5;border-radius:10px;background:#fbfcfe}
+  .dashboard-metrics small,.dashboard-metrics span{display:block;font-size:.58rem;color:#75839a}
+  .dashboard-metrics strong{display:block;font-size:.95rem;margin:7px 0;color:#152d4d}
+  .dashboard-chart-head{display:flex;align-items:center;justify-content:space-between;font-size:.72rem;color:#253955;margin-bottom:9px}
+  .dashboard-chart-head span{font-size:.58rem;color:#8290a4;font-weight:500}
+  .dashboard-chart{height:125px;display:flex;align-items:flex-end;gap:9px;padding:13px 14px 0;border:1px solid #e9edf5;border-radius:10px;background:repeating-linear-gradient(to bottom,#fff 0,#fff 30px,#edf1f7 31px)}
+  .chart-bar{flex:1;display:block;min-width:5px;background:linear-gradient(#f5bb48,#e49a1b);border-radius:4px 4px 0 0}
+  .chart-bar-alt{background:linear-gradient(#39c7bd,#159c99)}
+  .dashboard-lower{display:flex;flex-wrap:wrap;gap:14px;margin-top:13px;font-size:.59rem;color:#6e7c90}
+  .lower-dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:5px}.teal-dot{background:#20b5aa}.gold-dot{background:#efa928}
+  .home-float-note{position:absolute;z-index:2;display:flex;align-items:center;gap:10px;background:#fff;color:#1b2d48;padding:12px 15px;border-radius:13px;box-shadow:0 15px 40px #0003}
+  .home-float-note strong,.home-float-note small{display:block}.home-float-note strong{font-size:.75rem}.home-float-note small{font-size:.62rem;color:#728096;margin-top:3px}
+  .note-icon{display:grid;place-items:center;width:35px;height:35px;border-radius:10px;background:#e6f7f5;color:#0a9993;font-weight:900;font-size:1.1rem}
+  .note-icon-gold{background:#fff3d8;color:#b97a0c}
+  .note-student{top:0;left:-12px}.note-fees{bottom:36px;right:-8px}
+  .dashboard-caption{position:absolute;bottom:-3px;left:28px;color:#b7c8dd;font-size:.62rem}
+  .home-features{background:#fff}
+  .home-module-card{min-height:250px}
+  .home-centered-link{display:flex;justify-content:center;margin-top:32px}
+  .home-technology{background:#f4f7fc}
+  .home-technology-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:75px;align-items:center}
+  .home-benefit-list{display:grid;gap:18px;margin-top:25px}
+  .home-benefit-list>div{display:flex;gap:13px;align-items:flex-start}
+  .benefit-icon{display:grid;place-items:center;flex:0 0 39px;height:39px;border-radius:12px;background:#e6ecfa;color:#345bb2;font-weight:900}
+  .home-benefit-list p{margin:0;display:grid;gap:4px}
+  .home-benefit-list strong{font-size:.92rem;color:#1d2e49}
+  .home-benefit-list small{font-size:.83rem;line-height:1.65;color:#68768a}
+  .home-system-card{padding:26px;border-radius:24px;background:linear-gradient(145deg,#fff,#f6f8fc);border:1px solid #e1e8f2;box-shadow:0 25px 65px #17345b13}
+  .system-card-head{display:flex;align-items:center;justify-content:space-between;padding-bottom:18px;border-bottom:1px solid #e6ebf3;color:#243c5c;font-size:.75rem;font-weight:900;letter-spacing:.08em}
+  .system-live-dot{width:9px;height:9px;border-radius:50%;background:#17b7a9;box-shadow:0 0 0 5px #17b7a91c}
+  .system-card-title{padding:25px 0 20px}.system-card-title small{color:#5c6d87}.system-card-title h3{font-size:1.8rem;line-height:1.2;color:#102b50;margin:9px 0 0}
+  .system-flow{display:grid;gap:10px}
+  .system-flow-row{display:flex;align-items:center;gap:13px;background:#fff;border:1px solid #e5ebf4;border-radius:13px;padding:13px}
+  .flow-symbol{display:grid;place-items:center;flex:0 0 37px;height:37px;border-radius:10px;background:#e7edfc;color:#365bb4;font-size:.72rem;font-weight:900}
+  .flow-symbol-teal{background:#e0f7f4;color:#0a8e89}.flow-symbol-gold{background:#fff1d4;color:#a96f05}
+  .system-flow-row>span:nth-child(2){display:grid;gap:4px;flex:1}.system-flow-row strong{font-size:.82rem;color:#253954}.system-flow-row small{font-size:.69rem;color:#7a8799}
+  .flow-arrow{font-size:1.15rem;color:#8291a7}.flow-check{display:grid;place-items:center;width:25px;height:25px;border-radius:50%;background:#e1f7f4;color:#078e86;font-weight:900}
+  .system-card-foot{display:flex;justify-content:space-between;gap:10px;margin-top:18px;color:#7a8799;font-size:.65rem}
+  .home-portals{background:#fff}
+  .home-portal-card{padding:28px;border:1px solid #e5e8f0;border-radius:18px;background:#fff;box-shadow:0 9px 28px #172b4a08}
+  .home-portal-card h3{font-size:1.25rem;margin:18px 0 10px;letter-spacing:-.035em}
+  .home-portal-card>p{font-size:.88rem;line-height:1.75;color:#687286;margin:0 0 18px}
+  .portal-icon{display:grid;place-items:center;width:44px;height:44px;border-radius:13px;font-size:1.2rem;font-weight:900}
+  .portal-icon-blue{background:#e7efff;color:#3564bf}.portal-icon-violet{background:#eee8ff;color:#5a42bf}.portal-icon-gold{background:#fff1d7;color:#aa730d}
+  .home-portal-card ul{list-style:none;padding:0;margin:0 0 20px;display:grid;gap:10px}
+  .home-portal-card li{font-size:.79rem;line-height:1.5;color:#5d6a80}.home-portal-card li:before{content:"✓";color:#1aa89e;font-weight:900;margin-right:8px}
+  .home-portal-card>a{display:inline-flex;gap:8px;align-items:center;font-size:.82rem;font-weight:800;color:#3e5eb2}
+  .portal-card-featured{background:linear-gradient(145deg,#102d55,#173e70);color:#fff;border-color:#173e70;box-shadow:0 18px 45px #102d5526}
+  .portal-card-featured h3{color:#fff}.portal-card-featured>p,.portal-card-featured li{color:#d5dfed}.portal-card-featured>a{color:#ffca62}.portal-card-featured .portal-icon{background:#ffffff17;color:#ffca62}
+  .home-why{background:#f7f8fc}
+  .home-reasons-grid{gap:16px}
+  .home-reason-card{padding:24px;border-radius:17px;min-height:210px}
+  .home-reason-card .feature-icon{width:44px;height:44px;border-radius:12px;margin-bottom:16px}
+  .home-reason-card h3{font-size:1rem}
+  .home-reason-card p{font-size:.84rem;line-height:1.7;margin-bottom:0}
+  .home-about{background:#fff;padding-bottom:80px}
+  .home-about-copy{max-width:780px;margin:0 auto 48px;text-align:center}
+  .home-about-copy .lead{margin:0 auto}
+  .home-about-note{font-size:.9rem;line-height:1.8;color:#6c657c;margin:18px auto 0;max-width:720px}
+  .home-final-cta{padding:48px 52px;border-radius:25px;background:radial-gradient(ellipse at 0 0,#214d85 0,transparent 50%),linear-gradient(110deg,#0b2447,#111e36);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:32px}
+  .home-cta-kicker{color:#ffca62;font-size:.68rem;font-weight:900;letter-spacing:.13em}
+  .home-final-cta h2{font-size:clamp(1.8rem,3vw,2.65rem);line-height:1.15;letter-spacing:-.045em;margin:12px 0}
+  .home-final-cta p{max-width:570px;color:#d2dced;font-size:.92rem;line-height:1.8;margin:0}
+  .home-cta-actions{flex-shrink:0;margin-top:0}
+  @media(max-width:950px){.home-hero-grid,.home-technology-grid{gap:35px}.home-title{font-size:clamp(2.8rem,6vw,4.3rem)}.home-final-cta{align-items:flex-start;flex-direction:column}.home-cta-actions{margin-top:0}}
+  @media(max-width:720px){.home-hero{padding:65px 0 60px}.home-hero-grid,.home-technology-grid{grid-template-columns:1fr;gap:35px}.home-title{font-size:clamp(2.7rem,11vw,4rem)}.home-dashboard-wrap{padding:15px 6px 28px;margin-top:8px}.home-dashboard{transform:none}.home-float-note{padding:9px 10px}.home-float-note strong{font-size:.67rem}.home-float-note small{font-size:.56rem}.note-student{left:-2px}.note-fees{right:-2px;bottom:31px}.dashboard-caption{left:7px;font-size:.57rem}.dashboard-body{padding:13px}.dashboard-welcome{padding:17px}.dashboard-metrics{gap:6px}.dashboard-metrics>div{padding:10px 7px}.dashboard-metrics small,.dashboard-metrics span{font-size:.52rem}.dashboard-metrics strong{font-size:.8rem}.dashboard-chart{height:100px;gap:6px;padding-inline:9px}.home-benefit-list{gap:16px}.home-portal-card{padding:24px}.home-final-cta{padding:30px 24px}.home-final-cta .actions{width:100%}.home-final-cta .btn{width:100%}.home-proof-points{gap:10px 14px}.home-module-card{min-height:0}}
+</style>
